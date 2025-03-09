@@ -1,21 +1,25 @@
-# Get latest AMI ID for Amazon Linux2 OS
-data "aws_ami" "amzlinux2" {
+# Get latest AMI ID for Amazon Linux 2023
+data "aws_ami" "amazon_linux" {
   most_recent = true
-  owners = [ "amazon" ]
+  owners      = ["amazon"]
+
   filter {
-    name = "name"
-    values = [ "amzn2-ami-hvm-*-gp2" ]
+    name   = "name"
+    values = ["al2023-ami-*-kernel-*-x86_64"]
   }
+
   filter {
-    name = "root-device-type"
-    values = [ "ebs" ]
+    name   = "root-device-type"
+    values = ["ebs"]
   }
+
   filter {
-    name = "virtualization-type"
-    values = [ "hvm" ]
+    name   = "virtualization-type"
+    values = ["hvm"]
   }
+
   filter {
-    name = "architecture"
-    values = [ "x86_64" ]
+    name   = "architecture"
+    values = ["x86_64"]
   }
 }
