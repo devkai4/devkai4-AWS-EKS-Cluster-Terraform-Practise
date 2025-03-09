@@ -3,7 +3,7 @@
 This project deploys an EKS cluster and its associated infrastructure on AWS using Terraform.
 
 ## Architecture Overview
-![AWS EKS Architecture](./images/AWS-EKS-Cluster-Terraform-Practise.drawio.png)
+![AWS EKS Architecture](AWS-EKS-Cluster-Terraform-Practise.drawio.png)
 *Figure 1: AWS EKS Architecture with VPC, subnets, security groups and node groups*
 
 The deployed infrastructure includes the following components:
