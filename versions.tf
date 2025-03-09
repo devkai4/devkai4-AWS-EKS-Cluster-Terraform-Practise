@@ -6,11 +6,13 @@ terraform {
       source = "hashicorp/aws"
       #version = ">= 4.65"
       version = ">= 5.31"
-     }
+    }
   }
 }
 
 # Terraform Provider Block
 provider "aws" {
-  region = var.aws_region
+  region     = var.aws_region
+  access_key = var.aws_access_key
+  secret_key = var.aws_secret_key
 }
